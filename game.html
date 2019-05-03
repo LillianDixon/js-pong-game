@@ -130,7 +130,7 @@
 
         function drawNet(){
             for(var i=0; i<canvas.height; i+=40){
-                colorRect(canvas.width/2-1, i, 2, 20, 'white')
+                colorRect(canvas.width/2-1, i, 2, 20, 'limeGreen')
             }
         }
 
@@ -141,7 +141,7 @@
             if(startScreen){
                 canvasContext.fillText('Click to start', 350, 500)
             }else if(showingWinScreen){
-                canvasContext.fillStyle = 'white';
+                canvasContext.fillStyle = 'limeGreen';
 
                 if(player1Score >= WINNING_SCORE){
                     canvasContext.fillText('Left Player Won!', 350, 200)
@@ -160,11 +160,11 @@
             drawNet();
 
             // left paddle
-            colorRect(0,paddle1Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'white');
+            colorRect(0,paddle1Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'limeGreen');
             // right paddle
-            colorRect(canvas.width-10,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'white');
+            colorRect(canvas.width-10,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'limeGreen');
             // ball
-            colorCircle(ballX, ballY, 10, 'white');
+            colorCircle(ballX, ballY, 10, 'limeGreen');
 
             canvasContext.fillText(player1Score, 100, 100)
             canvasContext.fillText(player2Score, canvas.width - 100, 100)
